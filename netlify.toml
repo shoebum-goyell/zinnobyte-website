@@ -28,4 +28,9 @@
 [[headers]]
   for = "/*.css"
   [headers.values]
-    Content-Type = "text/css" 
+    Content-Type = "text/css"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Content-Type = "text/html" 
