@@ -1,9 +1,13 @@
 /*
-  Content-Type: application/javascript
+  Content-Type: text/html
   X-Content-Type-Options: nosniff
 
 /*.js
   Content-Type: application/javascript
+  X-Content-Type-Options: nosniff
+
+/*.css
+  Content-Type: text/css
   X-Content-Type-Options: nosniff
 
 /*.mjs
