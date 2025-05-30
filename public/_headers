@@ -42,4 +42,16 @@
 
 /*.gif
   Content-Type: image/gif
+  X-Content-Type-Options: nosniff
+
+/favicon.svg
+  Content-Type: image/svg+xml
+  X-Content-Type-Options: nosniff
+
+/favicon.png
+  Content-Type: image/png
+  X-Content-Type-Options: nosniff
+
+/apple-touch-icon.png
+  Content-Type: image/png
   X-Content-Type-Options: nosniff 

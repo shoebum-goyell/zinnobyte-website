@@ -60,8 +60,8 @@ const ProfileSection: React.FC = () => {
                     <div className="flex items-center justify-center w-12 h-12 bg-navy-100 rounded-full mx-auto mb-3">
                       <Briefcase size={20} className="text-navy-700" />
                     </div>
-                    <h3 className="font-medium text-navy-900 mb-1">Placements</h3>
-                    <p className="text-gray-600 text-sm">500+ Successful</p>
+                    <h3 className="font-medium text-navy-900 mb-1">Clients</h3>
+                    <p className="text-gray-600 text-sm">Top-rated by early-stage founders</p>
                   </div>
                   
                   <div className="bg-gray-50 p-4 rounded-lg">

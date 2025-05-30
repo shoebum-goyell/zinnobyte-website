@@ -58,4 +58,19 @@
 [[headers]]
   for = "/*.gif"
   [headers.values]
-    Content-Type = "image/gif" 
+    Content-Type = "image/gif"
+
+[[headers]]
+  for = "/favicon.svg"
+  [headers.values]
+    Content-Type = "image/svg+xml"
+
+[[headers]]
+  for = "/favicon.png"
+  [headers.values]
+    Content-Type = "image/png"
+
+[[headers]]
+  for = "/apple-touch-icon.png"
+  [headers.values]
+    Content-Type = "image/png" 

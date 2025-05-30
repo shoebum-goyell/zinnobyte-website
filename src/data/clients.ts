@@ -27,7 +27,7 @@ export const clients: Client[] = [
     name: 'Canoga Perkins',
     logo: 'https://res.cloudinary.com/dttkz0pie/image/upload/v1748522575/Canoga_Perkins_Corp_Logo_a1ew4j.jpg',
     industry: 'Network Infrastructure',
-    website: 'https://canoga.com'
+    website: 'https://www.canogaperkins.net/'
   },
   {
     id: 5,
