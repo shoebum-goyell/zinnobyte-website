@@ -15,22 +15,34 @@ const ContactForm: React.FC = () => {
       const form = e.currentTarget;
       const formData = new FormData(form);
       
-      const response = await fetch('https://formsubmit.co/2cc9df2479e17ad44eaf02d9d2dd5eca', {
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        body: formData,
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: '1afb09f6-ebb3-4b6f-ab7c-73e2c188613a', // Replace with your Web3Forms access key
+          name: formData.get('name'),
+          email: formData.get('email'),
+          company: formData.get('company'),
+          message: formData.get('message')
+        })
       });
 
-      if (!response.ok) {
-        throw new Error('Failed to send message');
-      }
+      const result = await response.json();
 
-      setIsSubmitted(true);
-      form.reset();
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 5000);
+      if (result.success) {
+        setIsSubmitted(true);
+        form.reset();
+        
+        // Reset success message after 5 seconds
+        setTimeout(() => {
+          setIsSubmitted(false);
+        }, 5000);
+      } else {
+        throw new Error(result.message || 'Failed to send message');
+      }
     } catch (err) {
       setError('Failed to send message. Please try again later.');
       console.error('Error sending email:', err);
@@ -89,7 +101,7 @@ const ContactForm: React.FC = () => {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} action="https://formsubmit.co/2cc9df2479e17ad44eaf02d9d2dd5eca" method="POST">
+              <form onSubmit={handleSubmit}>
                 <h3 className="text-2xl font-bold text-navy-900 mb-6">Get in Touch</h3>
                 
                 {error && (
