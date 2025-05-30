@@ -75,7 +75,7 @@ const ProfileSection: React.FC = () => {
                 
                 <div className="text-center">
                   <a href="/#contact" className="btn btn-primary">
-                    Work With Me
+                    Work With Us
                   </a>
                 </div>
               </div>
